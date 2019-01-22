@@ -33,10 +33,11 @@
 		3760A47221F1383F004D1E07 /* BagelBrowser.h in Headers */ = {isa = PBXBuildFile; fileRef = 3760A45821F1383F004D1E07 /* BagelBrowser.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3760A47321F1383F004D1E07 /* BagelURLConnectionInjector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3760A45921F1383F004D1E07 /* BagelURLConnectionInjector.m */; };
 		3760A47421F1383F004D1E07 /* BagelBaseModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 3760A45A21F1383F004D1E07 /* BagelBaseModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3760A47B21F13A47004D1E07 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3760A47A21F13A47004D1E07 /* CocoaAsyncSocket.framework */; };
+		A6DF1513031F25D28E342C3E /* libPods-Bagel.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 363D3DC63CAAADF936B5E8EE /* libPods-Bagel.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		363D3DC63CAAADF936B5E8EE /* libPods-Bagel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bagel.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3760A43821F13817004D1E07 /* Bagel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bagel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3760A44121F1383F004D1E07 /* BagelDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagelDeviceModel.m; sourceTree = "<group>"; };
 		3760A44221F1383F004D1E07 /* BagelRequestCarrier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagelRequestCarrier.m; sourceTree = "<group>"; };
@@ -65,7 +66,8 @@
 		3760A45921F1383F004D1E07 /* BagelURLConnectionInjector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagelURLConnectionInjector.m; sourceTree = "<group>"; };
 		3760A45A21F1383F004D1E07 /* BagelBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagelBaseModel.h; sourceTree = "<group>"; };
 		3760A47521F13872004D1E07 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		3760A47A21F13A47004D1E07 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = SOURCE_ROOT; };
+		A00941D63074CC28393FC0A2 /* Pods-Bagel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.debug.xcconfig"; sourceTree = "<group>"; };
+		E96B9A35349F23BCB0BC17AB /* Pods-Bagel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bagel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bagel/Pods-Bagel.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3760A47B21F13A47004D1E07 /* CocoaAsyncSocket.framework in Frameworks */,
+				A6DF1513031F25D28E342C3E /* libPods-Bagel.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,8 +87,9 @@
 			children = (
 				3760A47521F13872004D1E07 /* Info.plist */,
 				3760A44021F1383F004D1E07 /* Source */,
-				3760A47921F13A35004D1E07 /* Frameworks */,
 				3760A3F321F137B8004D1E07 /* Products */,
+				4BCC92B81A52CE4B78E357F6 /* Pods */,
+				9C5AFA415C3B7E14AE663851 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,12 +134,21 @@
 			path = Source;
 			sourceTree = SOURCE_ROOT;
 		};
-		3760A47921F13A35004D1E07 /* Frameworks */ = {
+		4BCC92B81A52CE4B78E357F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3760A47A21F13A47004D1E07 /* CocoaAsyncSocket.framework */,
+				A00941D63074CC28393FC0A2 /* Pods-Bagel.debug.xcconfig */,
+				E96B9A35349F23BCB0BC17AB /* Pods-Bagel.release.xcconfig */,
 			);
-			path = Frameworks;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9C5AFA415C3B7E14AE663851 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				363D3DC63CAAADF936B5E8EE /* libPods-Bagel.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3760A43D21F13817004D1E07 /* Build configuration list for PBXNativeTarget "Bagel" */;
 			buildPhases = (
+				E7C5FF34403EA053913EC3F3 /* [CP] Check Pods Manifest.lock */,
 				3760A43321F13817004D1E07 /* Headers */,
 				3760A43421F13817004D1E07 /* Sources */,
 				3760A43521F13817004D1E07 /* Frameworks */,
 				3760A43621F13817004D1E07 /* Resources */,
+				DF4931D1FF9AD2FC222420FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +238,42 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DF4931D1FF9AD2FC222420FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bagel/Pods-Bagel-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7C5FF34403EA053913EC3F3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bagel-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3760A43421F13817004D1E07 /* Sources */ = {
@@ -300,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -353,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -363,6 +413,7 @@
 		};
 		3760A43E21F13817004D1E07 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A00941D63074CC28393FC0A2 /* Pods-Bagel.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
@@ -393,6 +444,7 @@
 		};
 		3760A43F21F13817004D1E07 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E96B9A35349F23BCB0BC17AB /* Pods-Bagel.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
